@@ -8,22 +8,20 @@
         </button>
       </form>
     </div>
-    <%# <div class= "nav"> %>
-      <%# <ul class= "new"> %>
-        <%# <li><%= link_to 'ログイン', "users/sign_in", class: "login"</li> %> 
-        <%# <li><%= link_to '新規登録', "users/sign_up", class: "sign-up"</li> %>
-      <%# </ul> %>
-    <%# </div>  %>
     <div class="global-navi">
         <ul class="header-list">
-          <li><a href="/" class="choice">HOME</a></li>
-          <li><a href="#" class="choice">New Product</a></li>
-          <li><a href="#" class="choice">News</a></li>
-          <li><a href="#" class="choice">Maker Links</a></li>
-          <li><a href="#" class="choice">Member</a></li>
-          <li><a href="#" class="choice">Access</a></li>
-          <li><a href="#" class="choice">Contact Us</a></li>
+          <li><%= link_to 'HOME', "/", class: "choice" %></li>
+          <li><%= link_to 'New Product', "#", class: "choice" %></li>
+          <li><%= link_to 'News', "#", class: "choice" %></li>
+          <li><%= link_to 'Maker Links', "#", class: "choice" %></li>
+          <li><%= link_to 'Access', "#", class: "choice" %></li>
+          <li><%= link_to 'Contact Us', "#", class: "choice" %></li>
+          <li class="choice" id="down"> Member</li>
         </ul>
+        <ul class="show-lists hidden" id="pull-down">
+      <li><%= link_to 'ログイン', "users/sign_in", class: "login" %></li>
+      <li><%= link_to '新規登録', "users/sign_up", class: "sign-up" %></li>
+    </ul>
     </div>
   </div>
 </header>
