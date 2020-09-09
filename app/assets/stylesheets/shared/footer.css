@@ -1,0 +1,13 @@
+footer {
+  padding: 1vh 0;
+  background-color: #272727;
+  text-align: center;
+  width: 100vw; 
+  margin-top: 500px
+}
+
+.logo-white {
+  width: 20vh;
+  vertical-align: bottom;
+}
+
