@@ -3,11 +3,11 @@ footer {
   background-color: #272727;
   text-align: center;
   width: 100vw; 
-  margin-top: 500px
+  bottom: 0;
+  position: absolute;
 }
 
 .logo-white {
   width: 20vh;
   vertical-align: bottom;
 }
-
