@@ -63,10 +63,12 @@
 }
 
 .show-lists{
-  margin-left: 92vw;
+  margin-left: 88vw;
+  
   list-style: none;
   position: fixed;
   margin-top: 1vh;
+  z-index: 3;
 }
 
 .hidden{

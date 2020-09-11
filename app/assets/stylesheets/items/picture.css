@@ -1,0 +1,47 @@
+.main-img{
+  width: 100vw;
+	float: left;
+  position: relative;
+  height: 75vh;
+}
+
+.cp_cssslider {
+	width: 100vw;
+  overflow: hidden;
+}
+
+.cp_slide_item {
+	width: 300px;
+
+	float: left;
+	position: relative;
+}
+.cp_slidewrapper {
+	width: 400vw;/* slideの枚数×100% */
+	position: relative;
+	left: 0;
+	animation: slider 10s infinite ease;/* スピード */
+}
+@-webkit-keyframes slider {
+	/* 100%を枚数で割った%に割り振る */
+	0% {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	}
+	25% {
+	-webkit-transform: translateX(-100vw);
+	transform: translateX(-100vw);
+	}
+	50% {
+	-webkit-transform: translateX(-200vw);
+	transform: translateX(-200vw);
+	}
+	75% {
+	-webkit-transform: translateX(-300vw);
+	transform: translateX(-300vw); 
+	}
+	100% {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	}
+}

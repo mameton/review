@@ -1,0 +1,42 @@
+<%= render "shared/header" %>
+
+  
+    <div class='item-img-content'>
+      <%= image_tag @item.image , class:"item-box-img" %>
+        <h4 class="name">
+      <%= @item.name  %>
+        </h4>
+    </div>
+
+    
+    <% if user_signed_in? && current_user.id == @item.user_id %>
+    <%= link_to '編集', edit_item_path(@item.id) , method: :get, class: "item-red-btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to '削除', "#", method: :delete, class:'item-destroy' %>
+    <% end %>
+    <% if user_signed_in? && current_user.id != @item.user_id %>
+    <%= link_to 'コメントを投稿する', item_transactions_path(@item.id) ,class:"item-red-btn"%>
+    <% end %>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">投稿者</th>
+          <td class="detail-value"><%= User.find(@item.user_id).nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">Category</th>
+          <td class="detail-value"><%=Category.find(@item.category_id).name%></td>
+        </tr>
+        <tr>
+          <th class="detail-item">URL Link</th>
+          <td class="detail-value"><%=Item.find(@item.id).url%></td>
+        </tr>
+        <tr>
+          <th class="detail-item">Price</th>
+          <td class="detail-value"><%=Item.find(@item.id).price%>円</td>
+        </tr>
+        <tr>
+          <th class="detail-item">商品詳細</th>
+          <td class="detail-value"><%=Item.find(@item.id).text%></td>
+        </tr>

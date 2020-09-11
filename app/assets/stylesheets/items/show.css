@@ -1,0 +1,14 @@
+.item-img-content{
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.item-box-img{
+  height: 60vh;
+  width: 60vw;
+}
+
+.name{
+  font-weight: bold;
+  font-size: 50px;
+}
