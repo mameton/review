@@ -13,8 +13,8 @@
             <li><%= link_to 'コメントを投稿する', item_comments_path(@item.id) ,class:"item-btn"%></li>
           <% end %>
           <% unless user_signed_in?%>
-            <li><%= link_to 'ログイン', "#", class:"item-btn"%></li>
-            <li><%= link_to '新規登録', "#", class:"item-btn"%></li>
+            <li><%= link_to 'ログイン', "/users/sign_in", class:"item-btn"%></li>
+            <li><%= link_to '新規登録', "/users/sign_up", class:"item-btn"%></li>
           <% end %>
         </ul>
     </div>
@@ -67,5 +67,4 @@
   </div>
 </div>
 
- 
-    
+<%= render "shared/footer" %>

@@ -3,6 +3,11 @@
   justify-content: center;
 }
 
+.registration-main{
+  display: flex;
+  justify-content: center;
+}
+
 .form-wrap {
   width: 50%;
   padding-bottom: 70px;
@@ -14,7 +19,7 @@
 }
 
 .form-header-text {
-  margin-top: 10vh;
+  margin-top: 5vh;
   font-weight: bold;
 }
 
@@ -27,6 +32,10 @@
 .form-text {
   font-size: 14px;
   font-weight: bold;
+}
+
+textarea{
+  resize: none;
 }
 
 .input-default {

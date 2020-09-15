@@ -1,16 +1,39 @@
 <%= render "shared/header" %>
 
-<%= form_with  url: item_comments_path, local: true do |f| %>
 
-<%= f.text_area :message, class:"input-default", id:"comment", placeholder:"レビュー内容", autofocus: true %>
 
-<%= f.collection_select(:point_id, Point.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+  <%= form_with  url: item_comments_path, local: true do |f| %>
 
-<%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+<div class='comments-main'>
+  <div class="comment-review">
+      <div class="weight-bold-text">
+            <span class="mandatory">必須</span>
+              レビュー
+      </div>
+    <%= f.text_area :message, class:"itemstext", id:"comment", placeholder:"レビュー内容", autofocus: true %>
+  </div>
 
-<div class="sell-btn-contents">
-      <%= f.submit "投稿する", class:"sell-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
+  <div class="point-age">
+    <div class="comment-review">
+        <div class="weight-bold-text">
+              <span class="mandatory">必須</span>
+                評価
+        </div>
+    <%= f.collection_select(:point_id, Point.all, :id, :name, {}, {class:"select", id:"item-category"}) %>
     </div>
 
-<% end %>
+    <div class="comment-review">
+        <div class="weight-bold-text">
+              <span class="mandatory">必須</span>
+                年齢
+        </div>
+    <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select", id:"item-category"}) %>
+    </div>
+  </div>
+  
+  <div class="btn-content">
+    <%= f.submit "投稿する", class:"sell-btn" %>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+  <% end %>
+</div>
