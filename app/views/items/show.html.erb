@@ -1,42 +1,63 @@
 <%= render "shared/header" %>
 
-  
-    <div class='item-img-content'>
-      <%= image_tag @item.image , class:"item-box-img" %>
-        <h4 class="name">
-      <%= @item.name  %>
-        </h4>
+<div class='item-img-content'>
+  <%= image_tag @item.image , class:"item-box-img" %>
+    <div class="arrow-down">
+      <%= image_tag("arrow-down.png", class:"down", id:"edit")%>
+        <ul class="edit-list hid" id=edit-down>
+          <% if user_signed_in? && current_user.id == @item.user_id %>
+            <li><%= link_to '編集', edit_item_path(@item.id) , method: :get, class: "item-btn" %></li>
+            <li><%= link_to '削除', "#", method: :delete, class:'item-btn' %></li>
+          <% end %>
+          <% if user_signed_in? && current_user.id != @item.user_id %>
+            <li><%= link_to 'コメントを投稿する', item_comments_path(@item.id) ,class:"item-btn"%></li>
+          <% end %>
+        </ul>
     </div>
+</div>
+      
+  <table class="item-details">
+    <tbody>
+      <tr>
+        <th class="detail-item">商品名</th>
+        <td class="detail-value"><%= @item.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">カテゴリー</th>
+        <td class="detail-value"><%=Category.find(@item.category_id).name%></td>
+      </tr>
+      <tr>      
+        <th class="detail-item">URLリンク</th>
+        <td class="detail-value"><%=Item.find(@item.id).url%></td>
+      </tr>
+      <tr>
+        <th class="detail-item">値段</th>
+        <td class="detail-value"><%=Item.find(@item.id).price%>円</td>
+      </tr>
+      <tr>
+        <th class="detail-item">商品詳細</th>
+        <td class="detail-value"><%=Item.find(@item.id).text%></td>
+      </tr>
+      <tr>
+        <th class="detail-item">投稿者</th>
+        <td class="detail-value"><%= User.find(@item.user_id).nickname %></td>
+      </tr>
+    </tbody>
+  </table>
 
+<div class="comments">
+  <div class="comment-index">Review 　List</div>
+    <div class="review-index">
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <div class="user-message">
+            <%= link_to comment.user.nickname, "#", class: 'user-link' %>：
+            <%= comment.message %>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
+</div>
+
+ 
     
-    <% if user_signed_in? && current_user.id == @item.user_id %>
-    <%= link_to '編集', edit_item_path(@item.id) , method: :get, class: "item-red-btn" %>
-    <p class='or-text'>or</p>
-    <%= link_to '削除', "#", method: :delete, class:'item-destroy' %>
-    <% end %>
-    <% if user_signed_in? && current_user.id != @item.user_id %>
-    <%= link_to 'コメントを投稿する', item_comments_path(@item.id) ,class:"item-red-btn"%>
-    <% end %>
-
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-item">投稿者</th>
-          <td class="detail-value"><%= User.find(@item.user_id).nickname %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">Category</th>
-          <td class="detail-value"><%=Category.find(@item.category_id).name%></td>
-        </tr>
-        <tr>
-          <th class="detail-item">URL Link</th>
-          <td class="detail-value"><%=Item.find(@item.id).url%></td>
-        </tr>
-        <tr>
-          <th class="detail-item">Price</th>
-          <td class="detail-value"><%=Item.find(@item.id).price%>円</td>
-        </tr>
-        <tr>
-          <th class="detail-item">商品詳細</th>
-          <td class="detail-value"><%=Item.find(@item.id).text%></td>
-        </tr>

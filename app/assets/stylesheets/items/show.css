@@ -1,14 +1,97 @@
 .item-img-content{
   margin-top: 10vh;
   text-align: center;
+  position: relative;
 }
 
 .item-box-img{
   height: 60vh;
-  width: 60vw;
+  width: 60vh;
 }
 
-.name{
+
+.down{
+  height: 5vh;
+  position: absolute;
+  top: 86%;
+  left: 76%;
+}
+
+.hid{
+  display: none;
+}
+
+.edit-list{
+  position: absolute;
+  z-index: 3;
+  left: 73%;
+  top: 95%;
+}
+
+.edit-list>li{
+  padding: 15px;
+}
+
+.item-btn{
+  text-decoration: none;
+  color: white;
+  padding: 5px 30px;
+  border-radius: 10px;
+  background-color: rgb(78, 199, 199);
+}
+
+.item-details{
+  margin-top: 5vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail-item{
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid black;
+  font-size: 14px;
+  text-align: center;
   font-weight: bold;
-  font-size: 50px;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.comments{
+  margin-top: 5vh;
+}
+
+.comment-index{
+  background-color:#272727;
+  color: #fff; 
+  padding: 10px 16px;
+  text-align: center;
+  font-weight: bold;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+}
+
+.review-index{
+  margin-top: 3vh;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+.user-message{
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+
+.user-link{
+  text-decoration: none;
+  color: cadetblue;
 }
