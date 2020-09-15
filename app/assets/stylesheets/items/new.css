@@ -9,6 +9,7 @@
   font-weight: bold;
   text-align: center;
   margin-top: 10vh;
+  padding: 10px 0;
 }
 
 .img-upload {
@@ -30,7 +31,6 @@
   border-radius: 2px;
   color: white;
   font-size: 15px;
-  font-weight: bold;
   margin-right: 15px;
 }
 
@@ -39,12 +39,8 @@
   margin: 0 0 15px 10%;
 }
 
-.new-items {
-  padding: 5vh 0;
-}
-
 .items-text {
-  width:100%;
+  width:98%;
   padding: 16px 0 0 16px;
   font-size: 16px;
   resize: none;
@@ -61,76 +57,16 @@
   margin-right: 15px;
 }
 
+.category-price{
+  display: flex;
+  justify-content: space-between;
+}
+
 .select-box {
   height: 30px;
-  width: 100%;
   background-color: #f5f5f5;
   padding-left: 20px;
-}
-
-.question {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background: #0099e8;
-  color: #FFF;
-  font-size: 13px;
-  text-align: center;
-  line-height: 20px;
-  text-decoration: none;
-  margin-left: 5px;
-}
-
-.question-text {
-  display: flex;
-}
-
-
-
-
-/* 商品名と商品説明 */
-
-
-/* /商品名と商品説明 */
-
-/* 商品の詳細など */
-.items-detail {
-  display: flex;
-  justify-content: space-between;
-  padding: 2vh 0;
-}
-
-.items-detail>.form {
-  width: 300px;
-  padding: 2vh 0;
-}
-
-.select-box {
-  margin: 2vh 0;
-}
-
-/* /商品の詳細など */
-
-/* 販売価格 */
-.sell-price {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.price-content {
-  width: 300px;
-  border-bottom: 1px solid #ccc;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.price-text {
-  /* min-width: 170px; */
-  display: flex;
-  align-items: center;
+  width: 150%;
 }
 
 .sell-yen {
@@ -143,45 +79,37 @@
   padding-right: 10px;
 }
 
-/* /販売価格 */
 
-/* 注意書き */
-.caution {
-  padding: 5vh 0;
-}
-
-.sentence>a {
-  color: #0099e8;
-  text-decoration: none;
-}
-
-/* /注意書き */
-
-/* 下部ボタン */
 .sell-btn-contents {
-  width: 100%;
+  margin-top: 5vh;
   text-align: center;
+  display: flex;
+  align-items: center;
+  padding-left: 25%;
 }
+
 
 .sell-btn {
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background: #5fa5d3;
+  border: 1px solid #5fa5d3;
   color: #fff;
-  width: 100%;
-  height: 50px;
+  width: 30%;
   font-size: 14px;
   margin-bottom: 4vh;
+  padding: 10px;
 }
 
 .back-btn {
-  background: #aaa;
-  border: 1px solid #aaa;
-  color: #fff;
-  padding: 15px 35%;
+  background: lightgray;
+  border: 1px solid lightgray;
+  width: 30%;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 4vh;
+  margin-left: 10%;
   text-decoration: none;
+  color: black;
 }
-
-/* /下部ボタン */
 
 .items-sell-footer {
   background-color: #f5f5f5;
@@ -192,20 +120,6 @@
   align-items: center;
 }
 
-
-.items-sell-footer>.menu {
+.sss{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 3vh 0;
-}
-
-.menu>li>a {
-  color: black;
-  font-size: 12px;
-  margin: 2vw;
-}
-
-.inc {
-  font-size: 13px;
 }

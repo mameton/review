@@ -12,6 +12,10 @@
           <% if user_signed_in? && current_user.id != @item.user_id %>
             <li><%= link_to 'コメントを投稿する', item_comments_path(@item.id) ,class:"item-btn"%></li>
           <% end %>
+          <% unless user_signed_in?%>
+            <li><%= link_to 'ログイン', "#", class:"item-btn"%></li>
+            <li><%= link_to '新規登録', "#", class:"item-btn"%></li>
+          <% end %>
         </ul>
     </div>
 </div>
@@ -41,6 +45,10 @@
       <tr>
         <th class="detail-item">投稿者</th>
         <td class="detail-value"><%= User.find(@item.user_id).nickname %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">投稿者オススメ度</th>
+        <td class="detail-value"><%= Point.find(@item.point_id).name %></td>
       </tr>
     </tbody>
   </table>

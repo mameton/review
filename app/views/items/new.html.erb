@@ -28,35 +28,49 @@
     <div class="new-url">
       <div class="weight-bold-text">
       <span class="any">任意</span>
-        URL
+        URLリンク
       </div>
-      <%= f.text_area :url, class:"items-text", id:"item-name", placeholder:"URL（任意 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :url, class:"items-text", id:"item-name", placeholder:"URLリンク（任意 40文字まで)", maxlength:"40" %>
     </div>
 
-    <div class="">
+    <div class="new-explanation">
         <div class="weight-bold-text">
+        <span class="mandatory">必須</span>
           商品の説明
-          <span class="mandatory">必須</span>
         </div>
-        <%= f.text_area :text, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :text, class:"items-text", id:"item-info", placeholder:"使用感 etc（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+    </div>
 
+  <div class="category-price">
+    <div class="new-category">
+      <div class="weight-bold-text">
+      <span class="mandatory">必須</span>
+        カテゴリー
+      </div>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+    </div>
+    <div class="new-price">
+      <div class="weight-bold-text">
+        <span class="mandatory">必須</span>
+        <span>評価</span>
+      </div>
+        <%= f.collection_select(:point_id, Point.all, :id, :name, {}, {class:"select-box", id:"item-point"}) %>
+        <span class="sell-yen"></span>
+    </div>
+    <div class="new-price">
+      <div class="weight-bold-text">
+        <span class="mandatory">必須</span>
+        <span>価格</span>
+      </div>
+        <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+        <span class="sell-yen">円</span>
+    </div>
+  </div>
     
-    <div class="weight-bold-text">
-      カテゴリー
-        <span class="mandatory">必須</span>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-    </div>
-   
-    <div class="price-text">
-      <span>価格</span>
-        <span class="mandatory">必須</span>
-          <span class="sell-yen">¥</span>
-          <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
-    </div>
-
-    <div class="sell-btn-contents">
-      <%= f.submit "投稿する", class:"sell-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
-    </div>
+      <div class="sell-btn-contents">
+        <%= f.submit "投稿する", class:"sell-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
   <% end %>
 </div>
+

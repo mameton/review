@@ -1,0 +1,59 @@
+.sessions-main{
+  display: flex;
+  justify-content: center;
+}
+
+.form-wrap {
+  width: 50%;
+  padding-bottom: 70px;
+}
+
+.form-header {
+  text-align: center;
+  font-size: 22px;
+}
+
+.form-header-text {
+  margin-top: 10vh;
+  font-weight: bold;
+}
+
+.form-group {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.form-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.input-default {
+  width: 100%;
+  margin-top: 5px;
+  height: 20px;
+  padding: 10px 16px 8px;
+}
+
+.login-btn {
+  width: 50%;
+  margin-top: 5vh;
+  margin-left: 27%;
+}
+
+.login-red-btn {
+  width: 100%;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* .login-flash-message {
+  text-align: center;
+  color: red;
+}; */
