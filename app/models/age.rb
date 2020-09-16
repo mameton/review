@@ -6,7 +6,6 @@ class Age < ActiveHash::Base
     { id: 4, name: '30〜40代' },
     { id: 5, name: '40〜50代' },
     { id: 6, name: '50〜60代' },
-    { id: 7, name: '60〜70代' },
-    { id: 8, name: 'Secret or Other than' }
+    { id: 7, name: '60〜70代' }
   ]
 end

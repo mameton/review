@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<%= form_with  url: item_comments_path, local: true do |f| %>
+  <%= form_with  url: edit_item_comment_path, local: true do |f| %>
 
 <div class='comments-main'>
   <div class="comment-review">
@@ -28,7 +28,7 @@
     <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select", id:"item-category"}) %>
     </div>
   </div>
-
+  
   <div class="btn-content">
     <%= f.submit "投稿する", class:"sell-btn" %>
     <%=link_to 'もどる', root_path, class:"back-btn" %>

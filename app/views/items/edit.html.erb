@@ -1,0 +1,77 @@
+<%= render "shared/header" %>
+
+<div class="review-main">
+  <h2 class="review-title">レビュー内容を入力</h2>
+  <%= form_with model: @item, local: true do |f| %>
+
+    <div class="img-upload">
+      <div class="weight-bold-text">
+      <span class="mandatory">必須</span>
+        出品画像
+      </div>
+      <div class="click-upload">
+        <p>
+          Click!! ⬇︎
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+
+    <div class="new-items">
+      <div class="weight-bold-text">
+      <span class="mandatory">必須</span>
+        商品名
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+    </div>
+
+    <div class="new-url">
+      <div class="weight-bold-text">
+      <span class="any">任意</span>
+        URLリンク
+      </div>
+      <%= f.text_area :url, class:"items-text", id:"item-name", placeholder:"URLリンク（任意 40文字まで)", maxlength:"40" %>
+    </div>
+
+    <div class="new-explanation">
+        <div class="weight-bold-text">
+        <span class="mandatory">必須</span>
+          商品の説明
+        </div>
+        <%= f.text_area :text, class:"items-text", id:"item-info", placeholder:"使用感 etc（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+    </div>
+
+  <div class="category-price">
+    <div class="new-category">
+      <div class="weight-bold-text">
+      <span class="mandatory">必須</span>
+        カテゴリー
+      </div>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+    </div>
+    <div class="new-price">
+      <div class="weight-bold-text">
+        <span class="mandatory">必須</span>
+        <span>評価</span>
+      </div>
+        <%= f.collection_select(:point_id, Point.all, :id, :name, {}, {class:"select-box", id:"item-point"}) %>
+        <span class="sell-yen"></span>
+    </div>
+    <div class="new-price">
+      <div class="weight-bold-text">
+        <span class="mandatory">必須</span>
+        <span>価格</span>
+      </div>
+        <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+        <span class="sell-yen">円</span>
+    </div>
+  </div>
+    
+      <div class="sell-btn-contents">
+        <%= f.submit "変更する", class:"sell-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+  <% end %>
+</div>
+
+<%= render "shared/footer"%>

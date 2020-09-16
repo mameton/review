@@ -1,32 +1,31 @@
 <%= render "shared/header" %>
 
 <div class="body">
-<div class="cp_cssslider">
-  <div class="cp_slidewrapper">
-    <%= image_tag 'water.jpg',class:"main-img"%>
-    <%= image_tag 'water.jpg',class:"main-img"%>
-    <%= image_tag 'water.jpg',class:"main-img"%>
-    <%= image_tag 'water.jpg',class:"main-img"%>
-	</div>
-</div>
-
-<div class="h3">New Review
-</div>
-
-<div class="review-item">
-<ul class='item-lists'>
-<% @items.each do |item| %>
-  <%= link_to item_path(item.id) do %>
-  <li class='list'>
-  <div class='item-img-content'>
-  <%= image_tag item.image, class: "review-image" %>
-  <% end %>
-  <div class="name-category">
-  <%= item.name%> / <%=Category.find(item.category_id).name%>
+  <div class="cp_cssslider">
+    <div class="cp_slidewrapper">
+      <%= image_tag 'water.jpg',class:"main-img"%>
+      <%= image_tag 'water.jpg',class:"main-img"%>
+      <%= image_tag 'water.jpg',class:"main-img"%>
+      <%= image_tag 'water.jpg',class:"main-img"%>
+    </div>
   </div>
-<% end %>
-</li>
-</div>
+
+  <div class="h3">New Review</div>
+
+  <div class="review-item">
+    <ul class='item-lists'>
+      <% @items.each do |item| %>
+        <%= link_to item_path(item.id) do %>
+          <li class='list'>
+          <div class='item-img-content'>
+          <%= image_tag item.image, class: "review-image" %>
+        <% end %>
+            <div class="name-category">
+              <%= item.name%> / <%=Category.find(item.category_id).name%>
+            </div>
+          </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
 
-<%= render "shared/footer" %>
