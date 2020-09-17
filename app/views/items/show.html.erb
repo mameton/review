@@ -32,7 +32,7 @@
       </tr>
       <tr>      
         <th class="detail-item">URLリンク</th>
-        <td class="detail-value"><%=Item.find(@item.id).url%></td>
+        <td class="detail-value"><%=link_to(Item.find(@item.id).url,Item.find(@item.id).url, target: :_blank, rel: "noopener noreferrer")%></td>
       </tr>
       <tr>
         <th class="detail-item">値段</th>

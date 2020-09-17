@@ -28,14 +28,11 @@
 
 .search-button {
   cursor: pointer;
-  background-color: white;
-  border: solid 1px gray;
+  background-color: rgb(224, 224, 224);
+  border: 1px solid #272727;
   margin-left: 5px;
-  height: 5.8vh;
-}
-
-.search-icon {
-  height: 5vh;
+  height: 5.5vh;
+  width: 5vw;
 }
 
 .input-box {
