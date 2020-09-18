@@ -21,7 +21,8 @@
           <%= image_tag item.image, class: "review-image" %>
         <% end %>
             <div class="name-category">
-              <%= item.name%> / <%=Category.find(item.category_id).name%>
+              <div class="item-name"><%= item.name%></div>
+              (<%=Category.find(item.category_id).name%>)
             </div>
           </li>
       <% end %>

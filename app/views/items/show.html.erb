@@ -68,10 +68,13 @@
                 <div class="user-point">
                   <%= Point.find(comment.point_id).name%>
                 </div>
+                <div class="show-time">
+                <%= l comment.created_at%>
+                </div>
                 <% if user_signed_in? && current_user.id == comment.user_id %>
                   <div class="comment-edit-destroy">
-                    <%= link_to '変更/', "#", method: :get, class: "comment-edit" %>
-                    <%= link_to '削除', "#", method: :delete, class:'comment-edit' %>
+                    <%= link_to '変更/', edit_item_comment_path(@item,comment), method: :get, class: "comment-edit" %>
+                    <%= link_to '削除', item_comment_path(@item, comment), method: :delete, class:'comment-edit' %>
                   </div>
           <% end %>
             </div>
