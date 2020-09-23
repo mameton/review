@@ -34,7 +34,7 @@
 | ---------- | ------------- | -------------------------------- |
 | user       | references    | null: false, foreign_key: true   |
 | item       | references    | null: false, foreign_key: true   |
-| content    | text          | null: false                      |
+| message    | text          | null: false                      |
 | point      | integer       | null: false                      |
 | age        | integer       | null: false                      |
 
