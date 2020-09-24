@@ -1,8 +1,8 @@
 .main-img{
-  width: 100vw;
+  width: 100VW;
 	float: left;
   position: relative;
-  height: 75vh;
+  height: 75vh
 }
 
 .cp_cssslider {
@@ -20,7 +20,7 @@
 	width: 400vw;/* slideの枚数×100% */
 	position: relative;
 	left: 0;
-	animation: slider 10s infinite ease;/* スピード */
+	animation: slider 15s infinite ease;/* スピード */
 }
 @-webkit-keyframes slider {
 	/* 100%を枚数で割った%に割り振る */
