@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-  <%= form_with  url: "#", local: true do |f| %>
+  <%= form_with model:[@item, @comment], local: true do |f| %>
 
 <div class='comments-main'>
   <div class="comment-review">
@@ -30,7 +30,7 @@
   </div>
   
   <div class="btn-content">
-    <%= f.submit "投稿する", class:"sell-btn" %>
+    <%= f.submit "変更する", class:"sell-btn" %>
     <%=link_to 'もどる', root_path, class:"back-btn" %>
   </div>
   <% end %>
