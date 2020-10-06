@@ -54,9 +54,13 @@
 ## 📦 Function
 
 ### 👨‍👨‍👧‍👦 ログイン機能
+![](https://github.com/mameton/review/blob/master/2e1814c60acf0f1c7e0d0e9ddb6a1af6.gif)
+![](https://github.com/mameton/review/blob/master/0221197790f3f21bcd73cfff577c1c22.gif)
 
 ### 🎁 投稿機能
+![](https://github.com/mameton/review/blob/master/637b9bffcb84a54a72ff950300273a9d.gif)
+![](https://github.com/mameton/review/blob/master/d9697808205958989944f6406fdcbb1f.gif)
 
 ### 📝 コメント機能
-
-### 💬 コメントの変更＆削除機能
+![](https://github.com/mameton/review/blob/master/cabc8ab759a35a0ffb81c23bfb1c3603.gif)
+![](https://github.com/mameton/review/blob/master/211d4f1458b8768391653e46d14fdf29.gif)
