@@ -41,3 +41,5 @@
 ### Association
 - belongs_to :user
 - belongs_to :item
+
+![](https://i.gyazo.com/d0461c16ed256e82ab57110ed0d7b7f2.jpg)
