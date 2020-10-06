@@ -45,3 +45,18 @@
 
 # レビューアプリ
 ![](https://github.com/mameton/review/blob/master/02d9a73013f4eb56599f321d04599ec6.gif)
+### 商品を投稿しそれに対してコメントが記載できる
+
+## 🌐　App URL
+
+### https://review-28778.herokuapp.com/
+
+## 📦 Function
+
+### 👨‍👨‍👧‍👦 ログイン機能
+
+### 🎁 投稿機能
+
+### 📝 コメント機能
+
+### 💬 コメントの変更＆削除機能
