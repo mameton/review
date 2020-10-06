@@ -44,4 +44,4 @@
 
 # レビューアプリ
 
-![demo](https://gyazo.com/51f91c09b1cb2919fbd422f033b5d668/raw)
+![](https://github.com/mameton/review/blob/master/02d9a73013f4eb56599f321d04599ec6.gif)
