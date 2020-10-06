@@ -44,4 +44,4 @@
 
 # レビューアプリ
 
-![](https://gyazo.com/51f91c09b1cb2919fbd422f033b5d668)
+[![Image from Gyazo](https://i.gyazo.com/51f91c09b1cb2919fbd422f033b5d668.gif)](https://gyazo.com/51f91c09b1cb2919fbd422f033b5d668)
