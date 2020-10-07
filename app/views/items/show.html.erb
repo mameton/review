@@ -63,7 +63,7 @@
               <%= image_tag("user-icon.png", class:"icon-img", id:"user-edit")%>
               <%= link_to comment.user.nickname, "#", class: 'user-link' %>
                 <div class="user-age">
-                  <%= Age.find(comment.point_id).name%>
+                  <%= Age.find(comment.age_id).name%>
                 </div>
                 <div class="user-point">
                   <%= Point.find(comment.point_id).name%>
